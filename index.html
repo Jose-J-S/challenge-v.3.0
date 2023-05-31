@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONE | Alura LATAM</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="shortcut icon" href="./img/cube-solid.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./index-style.css">
+</head>
+
+<body>
+  <header>
+    <a href="">
+      <figure></figure>
+    </a>
+  </header>
+
+  <main>
+    <section class="main-content">
+      <textarea class="input" placeholder="Ingrese el texto aqui" autofocus></textarea>
+      <div class="alert">
+        <span class="material-symbols-outlined">error</span>
+        <label class="info">Solo letras minúsculas y sin acentos</label>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-encrypt" onclick="onEncrypt()">Encriptar</button>
+        <button class="btn btn-decrypt" onclick="onDecrypt()">Desencriptar</button>
+      </div>
+    </section>
+
+    <section class="aside-content">
+      <textarea class="output" readonly></textarea>
+      <button class="btn btn-copy" onclick="onCopy()">Copiar</button>
+    </section>
+  </main>
+
+  <footer>
+    <P>&copy; Dev. Jacobo Saravia José</P>
+  </footer>
+
+  <script src="https://app.embed.im/snow.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./index-main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --bgColorMain: skyblue;
+  --darkblueColor: #0A3871;
+  --darkblueHover: #062447;
+  --lightColor: #d8dfe8;
+  --lightHover: #c9c9cc;
+  --whiteColor: #fff;
+  --alertColor: #67808e;
+  --textShadow: 2px 1px 10px white;
+  --background-left: left / contain no-repeat;
+  --background-contain: center / contain no-repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--bgColorMain);
+}
+
+header,
+footer {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+}
+
+header {
+  top: 0;
+  padding: 30px;
+}
+
+header figure {
+  height: 100%;
+  width: 100%;
+  background: var(--background-left) url('./img/logo.svg');
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+  height: calc(100vh - 200px);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 10px;
+  gap: 10px;
+}
+
+main .main-content {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+}
+
+.main-content .alert {
+  padding: 20px 0 20px 40px;
+  color: var(--alertColor);
+  text-shadow: var(--textShadow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main .btn-group {
+  display: flex;
+  gap: 20px;
+  padding: 0 0 0 40px;
+}
+
+.btn {
+  width: 90%;
+  max-width: 250px;
+  border: 1px solid var(--darkblueColor);
+  padding: 15px 50px;
+  border-radius: 15px;
+  background-color: var(--lightColor);
+  color: var(--darkblueColor);
+}
+
+.btn-encrypt {
+  background-color: var(--darkblueColor);
+  color: var(--lightColor);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--lightHover);
+  transition: all 0.75s;
+}
+
+.btn-encrypt:hover {
+  background-color: var(--darkblueHover);
+  transition: all 0.8s;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+section textarea {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 25px;
+  text-transform: lowercase;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--darkblueColor);
+}
+
+section textarea::placeholder {
+  color: var(--darkblueColor);
+}
+
+section .output {
+  background: var(--background-contain) url('./img/munheco.svg');
+}
+
+main .aside-content {
+  position: relative;
+}
+
+section .btn-copy {
+  margin: auto;
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+a {
+  text-decoration: none;
+  background-color: ligh;
+}
+
+footer {
+  /* border: 1px solid var(--darkblueColor); */
+  background-color: var(--darkblueColor);
+  color: var(--lightColor);
+  font: bold 20px 'Roboto', sans-serif !important;
+  text-shadow: 2px 2px 10px #000;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+footer .icon-github {
+  background: var(--background-contain) url('./img/github.png');
+}
+
+footer .icon-linkedin {
+  background: var(--background-contain) url('./img/linkedin.png');
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
